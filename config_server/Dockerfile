@@ -9,5 +9,4 @@ RUN echo "$HOSTS" > /root/.ssh/known_hosts
 ADD /src/docker/config_server-0.0.1-SNAPSHOT.jar config-server.jar
 ARG PROFILES
 ENV PROFILE=$PROFILES
-#ENTRYPOINT ["java","-jar","-Dspring.profiles.active=${PROFILE}","config-server.jar"]
-CMD java -jar -Dspring.profiles.active=${PROFILE} -Dserver.port=$PORT config-server.jar
+ENTRYPOINT ["java","-jar","-Dspring.profiles.active=${PROFILE}","config-server.jar"]
