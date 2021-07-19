@@ -1,3 +1,4 @@
 build:
   docker:
-    web: Eureka-Server/Dockerfile
+    #web: Eureka-Server/Dockerfile
+    web: config_server/Dockerfile
