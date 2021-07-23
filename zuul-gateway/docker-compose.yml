@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  zuul-gateway:
+    container_name: zuul-gateway
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - "8762:8762"
